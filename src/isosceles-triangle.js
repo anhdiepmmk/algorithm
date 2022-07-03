@@ -9,12 +9,8 @@ function drawIsoscelesTriangle(h) {
         for(let k = 1; k <= 2*i-1; k++) {
             shape += "*";
         }
-        // print space
-        for(let j = 1; j<= h-i; j++) {
-            shape += "*";
-        }
         shape += "\n";
     }
     return shape;
 }
-drawIsoscelesTriangle(6);
+console.log(drawIsoscelesTriangle(10));
