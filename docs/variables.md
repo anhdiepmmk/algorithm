@@ -215,7 +215,48 @@ inside function 2
 outside 1
 ```
 
+### Pass by value (tham tri) and pass by reference (tham chieu)
+
+#### Pass by Value:
+
+In Pass by Value, Function is called by directly passing the value of the variable as the argument. Changing the argument inside the function doesn’t affect the variable passed from outside the function.
+
+Javascript always pass by value so changing the value of the variable never changes the underlying primitive (String or number).
+
+```
+let x = 4;
+let y = 5;
+function doSomeThing(a, b) {
+  console.log('before', a, b)
+  a = 1;
+  b = 9
+  console.log('after', a, b)
+}
+doSomeThing(x, y);
+console.log('outside', x, y);
+```
+
+#### Pass by Reference:
+
+In Pass by Reference, Function is called by directly passing the reference/address of the variable as the argument. Changing the argument inside the function affect the variable passed from outside the function. In Javascript objects and arrays follows pass by reference.
+
+```
+const aPerson = {
+  name: 'Diep',
+};
+
+function doSomeThing(obj) {
+  console.log('before', obj)
+  obj.name = 'Nam';
+  console.log('after', obj)
+}
+doSomeThing(aPerson);
+console.log('outside', aPerson);
+```
+
 ### References:
 
 - https://www.geeksforgeeks.org/difference-between-var-let-and-const-keywords-in-javascript/#:~:text=The%20scope%20of%20a%20let%20variable%20is%20block%20scope.,re%2Ddeclared%20into%20the%20scope.
 - https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference/
+- https://www.w3schools.com/js/js_hoisting.asp
+- https://medium.com/nodesimplified/javascript-pass-by-value-and-pass-by-reference-in-javascript-fcf10305aa9c
