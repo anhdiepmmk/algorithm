@@ -1,21 +1,32 @@
+// function drawIsoscelesTriangle(h) {
+//     let shape = "";
+//     for(let i = 1; i <= h; i++) {
+//         // print space
+//         for(let j = 1; j<= h-i; j++) {
+//             shape += " ";
+//         }
+//         // print star "*"
+//         for(let k = 1; k <= 2*i-1; k++) {
+//             shape += "*";
+//         }
+//         shape += "\n";
+//     }
+//     return shape;
+// }
+// console.log(drawIsoscelesTriangle(10));
 
-function pascal(k, n) {
-    if(k == 0 || k == n) {
-        return 1;
-    } else {
-        return pascal(k, n - 1) + pascal(k - 1, n - 1);
-    }
-};
-
-function drawAPascalTriangle(n) {
+function drawTriangle(n) {
     let shape = "";
-    for(let i = 0; i <= n; i++) {
-        for(let k = 0; k <= i; k++) {
-            shape += pascal(k, i);
+    for(let i = n; i > 0; i--) {
+        for(let j = n; j > i; j--) {
+            shape += " ";
+        }
+        for(let k = 1; k <= 2*i - 1 ; k++) {
+            shape += "*";
         }
         shape += "\n";
     }
     return shape;
-};
+}
 
-console.log(drawAPascalTriangle(10));
+console.log(drawTriangle(10)); 
