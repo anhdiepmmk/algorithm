@@ -51,5 +51,5 @@ describe('pascal triangle', () => {
 
 			expect(result).toBe(expectedResult);
 		});
-	})
+	});
 });
