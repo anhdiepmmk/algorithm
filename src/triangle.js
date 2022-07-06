@@ -1,10 +1,10 @@
 function draw(h) {
-	let shape = "";
+	let shape = '';
 	for (let i = 0; i < h; i++) {
 		for (let j = 0; j < i; j++) {
-			shape += "*";
+			shape += '*';
 		}
-		shape += "\n";
+		shape += '\n';
 	}
 	return shape;
 }
