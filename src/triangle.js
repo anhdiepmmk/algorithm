@@ -1,12 +1,16 @@
 function draw(h) {
 	let shape = '';
-	for (let i = 0; i < h; i++) {
+	for (let i = 1; i <= h; i++) {
 		for (let j = 0; j < i; j++) {
 			shape += '*';
 		}
-		shape += '\n';
+		if (i !== h) {
+			shape += '\n';
+		}
 	}
 	return shape;
 }
 
-console.log(draw(10));
+module.exports = {
+	draw,
+};

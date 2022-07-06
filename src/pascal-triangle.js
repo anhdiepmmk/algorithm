@@ -8,13 +8,18 @@ function pascal(k, n) {
 
 function drawPascalTriangle(n) {
 	let shape = '';
-	for (let i = 0; i <= n; i++) {
+	for (let i = 0; i < n; i++) {
 		for (let k = 0; k <= i; k++) {
 			shape += pascal(k, i);
 		}
-		shape += '\n';
+		if (i !== n - 1) {
+			shape += '\n';
+		}
 	}
 	return shape;
 }
 
-console.log(drawPascalTriangle(10));
+module.exports = {
+	pascal,
+	drawPascalTriangle,
+};
