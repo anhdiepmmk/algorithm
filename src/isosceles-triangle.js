@@ -18,4 +18,3 @@ function drawIsoscelesTriangle(h) {
 module.exports = {
 	drawIsoscelesTriangle,
 };
-// console.log(drawIsoscelesTriangle(4));

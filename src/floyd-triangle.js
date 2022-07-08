@@ -16,5 +16,3 @@ function drawFloyd(n) {
 module.exports = {
 	drawFloyd,
 };
-
-// console.log(drawFloyd(4));

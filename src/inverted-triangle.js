@@ -15,5 +15,3 @@ function drawInvertedTriangle(n) {
 module.exports = {
 	drawInvertedTriangle,
 };
-
-// console.log(drawInvertedTriangle(3));
