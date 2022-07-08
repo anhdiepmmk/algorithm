@@ -18,6 +18,7 @@ function drawPascalTriangle(n) {
   }
   return shape;
 }
+
 module.exports = {
   pascal,
   drawPascalTriangle,

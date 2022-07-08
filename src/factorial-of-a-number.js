@@ -1,5 +1,4 @@
-// Not recursive
-function calFactorial(n) {
+function calcFactorialNonRecursive(n) {
   if (n === 0) {
     return 1;
   } else {
@@ -11,20 +10,16 @@ function calFactorial(n) {
   }
 }
 
-module.exports = {
-  calFactorial,
-};
-
-// console.log(calFactorial(0));
-
-// Recursive
-/* function calFactorial(n) {
-    if(n == 0) { 
-        return 1;
-    } else {
-    n *= calFactorial(n - 1);
-    }
-    return n;
+function calcFactorialByRecursive(n) {
+  if (n === 0) {
+    return 1;
+  } else {
+    n *= calcFactorialByRecursive(n - 1);
+  }
+  return n;
 }
 
-console.log(calFactorial(5)); */
+module.exports = {
+  calcFactorialNonRecursive,
+  calcFactorialByRecursive,
+};
