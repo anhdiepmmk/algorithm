@@ -1,4 +1,4 @@
-const isosceles = require('./isosceles-triangle')
+const isosceles = require('./isosceles-triangle');
 
 describe('isosceles', () => {
 	describe('draw', () => {

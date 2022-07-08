@@ -7,13 +7,13 @@ function drawInvertedTriangle(n) {
 		for (let k = 1; k <= 2 * i - 1; k++) {
 			shape += '*';
 		}
-			shape += '\n';
+		shape += '\n';
 	}
 	return shape;
 }
 
 module.exports = {
 	drawInvertedTriangle,
-}
+};
 
 // console.log(drawInvertedTriangle(3));
