@@ -1,25 +1,30 @@
-// Không có đệ quy
-function factorialOfNumber(n) {
-	if (n == 0) {
-		return 1;
-	} else {
-		let element = 1;
-		for (let i = 1; i <= n; i++) {
-			element *= i;
-		}
-		return element;
-	}
+// Not recursive
+function calFactorial(n) {
+  if (n === 0) {
+    return 1;
+  } else {
+    let element = 1;
+    for (let i = 1; i <= n; i++) {
+      element *= i;
+    }
+    return element;
+  }
 }
-console.log(factorialOfNumber(5));
 
-// Hàm đệ quy
-/* function factorialOfNumber(n) {
+module.exports = {
+  calFactorial,
+};
+
+// console.log(calFactorial(0));
+
+// Recursive
+/* function calFactorial(n) {
     if(n == 0) { 
         return 1;
     } else {
-    n *= factorialOfNumber(n - 1);
+    n *= calFactorial(n - 1);
     }
     return n;
 }
 
-console.log(factorialOfNumber(5)); */
+console.log(calFactorial(5)); */

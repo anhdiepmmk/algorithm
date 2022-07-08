@@ -1,8 +1,12 @@
-function swap2Numbers(a, b) {
-	a = a + b;
-	b = a - b;
-	a = a - b;
-	return { a, b };
+function swap(number1, number2) {
+  number1 = number1 + number2;
+  number2 = number1 - number2;
+  number1 = number1 - number2;
+  return { number1, number2 };
 }
 
-console.log(swap2Numbers(5, 6));
+module.exports = {
+  swap,
+};
+
+// console.log(swnumber1p(5, 6));

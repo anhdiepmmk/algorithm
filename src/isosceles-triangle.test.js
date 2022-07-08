@@ -1,12 +1,12 @@
-const triangle = require('./triangle');
+const isosceles = require('./isosceles-triangle');
 
-describe('triangle', () => {
+describe('isosceles', () => {
   describe('draw', () => {
     test('should draw triangle when given height = 4', () => {
       const height = 4;
-      const expectedResult = `*\n**\n***\n****`;
+      const expectedResult = `   *\n  ***\n *****\n*******`;
 
-      const result = triangle.draw(height);
+      const result = isosceles.drawIsoscelesTriangle(height);
 
       expect(result).toBe(expectedResult);
     });
@@ -15,7 +15,7 @@ describe('triangle', () => {
       const height = 0;
       const expectedResult = ``;
 
-      const result = triangle.draw(height);
+      const result = isosceles.drawIsoscelesTriangle(height);
 
       expect(result).toBe(expectedResult);
     });
@@ -24,7 +24,7 @@ describe('triangle', () => {
       const height = -1;
       const expectedResult = ``;
 
-      const result = triangle.draw(height);
+      const result = isosceles.drawIsoscelesTriangle(height);
 
       expect(result).toBe(expectedResult);
     });
