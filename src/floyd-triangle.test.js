@@ -8,5 +8,12 @@ describe('Floyd triangle', () => {
 			const result = triangle.drawFloyd(height);
 			expect(result).toBe(expectedResult);
 		});
+
+		test('should draw in floyd triangle when given height = 0', () => {
+			const height = 0;
+			const expectedResult = ``;
+			const result = triangle.drawFloyd(height);
+			expect(result).toBe(expectedResult);
+		});
 	});
 });
