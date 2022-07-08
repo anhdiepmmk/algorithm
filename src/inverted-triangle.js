@@ -12,4 +12,8 @@ function drawInvertedTriangle(n) {
 	return shape;
 }
 
-console.log(drawInvertedTriangle(10));
+module.exports = {
+	drawInvertedTriangle,
+};
+
+// console.log(drawInvertedTriangle(3));

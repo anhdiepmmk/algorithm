@@ -9,8 +9,13 @@ function drawIsoscelesTriangle(h) {
 		for (let k = 1; k <= 2 * i - 1; k++) {
 			shape += '*';
 		}
-		shape += '\n';
+		if (i !== h) {
+			shape += '\n';
+		}
 	}
 	return shape;
 }
-console.log(drawIsoscelesTriangle(10));
+module.exports = {
+	drawIsoscelesTriangle,
+};
+// console.log(drawIsoscelesTriangle(4));

@@ -6,9 +6,15 @@ function drawFloyd(n) {
 			shape += k;
 			++k;
 		}
-		shape += '\n';
+		if (i !== n) {
+			shape += '\n';
+		}
 	}
 	return shape;
 }
 
-console.log(drawFloyd(4));
+module.exports = {
+	drawFloyd,
+};
+
+// console.log(drawFloyd(4));
