@@ -4,8 +4,6 @@ function findLargestNumber(numberArray) {
   for (let index = 0; index < numberArray.length; index++) {
     if (max < numberArray[index]) {
       max = numberArray[index];
-    } else {
-      max = max;
     }
   }
   return max;
