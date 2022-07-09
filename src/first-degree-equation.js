@@ -1,5 +1,4 @@
 function solveFirstDegreeEquation(number1, number2) {
-  let result = 0;
   if (number1 === 0 && number2 === 0) {
     return 'The equation has infinitely many solutions';
   } else if (number1 !== 0 && number2 === 0) {
