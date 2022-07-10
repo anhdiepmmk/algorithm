@@ -4,7 +4,7 @@ describe('triangle', () => {
   describe('draw', () => {
     test('should draw triangle when given height = 4', () => {
       const height = 4;
-      const expectedResult = `*\n**\n***\n****`;
+      const expectedResult = '*\n**\n***\n****';
 
       const result = triangle.draw(height);
 
@@ -13,7 +13,7 @@ describe('triangle', () => {
 
     test('should draw triangle when given height = 0', () => {
       const height = 0;
-      const expectedResult = ``;
+      const expectedResult = '';
 
       const result = triangle.draw(height);
 
@@ -22,7 +22,7 @@ describe('triangle', () => {
 
     test('should draw triangle when given height = -1', () => {
       const height = -1;
-      const expectedResult = ``;
+      const expectedResult = '';
 
       const result = triangle.draw(height);
 
