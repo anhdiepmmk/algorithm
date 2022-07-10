@@ -1,22 +1,21 @@
 function calcFactorialNonRecursive(n) {
   if (n === 0) {
     return 1;
-  } else {
-    let element = 1;
-    for (let i = 1; i <= n; i++) {
-      element *= i;
-    }
-    return element;
   }
+  let element = 1;
+  for (let i = 1; i <= n; i += 1) {
+    element *= i;
+  }
+  return element;
 }
 
 function calcFactorialByRecursive(n) {
-  if (n === 0) {
+  let number = n;
+  if (number === 0) {
     return 1;
-  } else {
-    n *= calcFactorialByRecursive(n - 1);
   }
-  return n;
+  number *= calcFactorialByRecursive(number - 1);
+  return number;
 }
 
 module.exports = {
