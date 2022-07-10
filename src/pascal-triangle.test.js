@@ -36,7 +36,7 @@ describe('pascal triangle', () => {
   describe('drawPascalTriangle', () => {
     test('should draw pascal triangle when n = 2', () => {
       const n = 2;
-      const expectedResult = `1\n11`;
+      const expectedResult = '1\n11';
 
       const result = pascalTriangle.drawPascalTriangle(n);
 
@@ -45,7 +45,7 @@ describe('pascal triangle', () => {
 
     test('should draw pascal triangle when n = 0', () => {
       const n = 0;
-      const expectedResult = ``;
+      const expectedResult = '';
 
       const result = pascalTriangle.drawPascalTriangle(n);
 
