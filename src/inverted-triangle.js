@@ -7,7 +7,9 @@ function drawInvertedTriangle(n) {
     for (let k = 1; k <= 2 * i - 1; k += 1) {
       shape += '*';
     }
-    shape += '\n';
+    if (i !== 1) {
+      shape += '\n';
+    }
   }
   return shape;
 }
