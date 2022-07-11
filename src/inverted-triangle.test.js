@@ -4,9 +4,9 @@ describe('inverted-triangle', () => {
   describe('draw', () => {
     test('should draw in inverted triangle when given height = 3', () => {
       const height = 3;
-      const expectedResult = '*****\n ***\n  *\n';
+      const expectedResult = '*****\n ***\n  *';
       const result = triangle.drawInvertedTriangle(height);
-      expect(result).toBe(expectedResult);
+      expect(result).toEqual(expectedResult);
     });
 
     test('should draw in inverted triangle when given height = 0', () => {
