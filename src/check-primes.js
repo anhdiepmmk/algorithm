@@ -1,4 +1,4 @@
-function checkPrimeNumber(n) {
+function isPrimeNumber(n) {
   let flag = true;
   if (n < 2) {
     flag = false;
@@ -6,9 +6,6 @@ function checkPrimeNumber(n) {
     for (let i = 2; i < n - 1; i += 1) {
       if (n % i === 0) {
         flag = false;
-        break;
-      } else {
-        flag = true;
       }
     }
   }
@@ -16,5 +13,5 @@ function checkPrimeNumber(n) {
 }
 
 module.exports = {
-  checkPrimeNumber,
+  isPrimeNumber,
 };
