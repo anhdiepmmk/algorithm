@@ -3,7 +3,7 @@ function isPrimeNumber(n) {
   if (n < 2) {
     flag = false;
   } else {
-    for (let i = 2; i < n - 1; i += 1) {
+    for (let i = 2; i < n / 2; i += 1) {
       if (n % i === 0) {
         flag = false;
       }
