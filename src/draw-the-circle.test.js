@@ -4,16 +4,16 @@ describe('Circle', () => {
   test('should draw the circle when given a radius = 5', () => {
     const radius = 5;
     const expected = '.....-.....\n'
-                   + '..-*****-..\n'
-                   + '.-*******-.\n'
-                   + '.*********.\n'
-                   + '.*********.\n'
-                   + '-*********-\n'
-                   + '.*********.\n'
-                   + '.*********.\n'
-                   + '.-*******-.\n'
-                   + '..-*****-..\n'
-                   + '.....-.....';
+      .concat('..-*****-..\n')
+      .concat('.-*******-.\n')
+      .concat('.*********.\n')
+      .concat('.*********.\n')
+      .concat('-*********-\n')
+      .concat('.*********.\n')
+      .concat('.*********.\n')
+      .concat('.-*******-.\n')
+      .concat('..-*****-..\n')
+      .concat('.....-.....');
     const result = circle.drawCircle(radius);
     expect(result).toEqual(expected);
   });
@@ -21,21 +21,19 @@ describe('Circle', () => {
   test('should draw the circle when given a radius = 3', () => {
     const radius = 3;
     const expected = '...-...\n'
-                   + '.*****.\n'
-                   + '.*****.\n'
-                   + '-*****-\n'
-                   + '.*****.\n'
-                   + '.*****.\n'
-                   + '...-...';
+      .concat('.*****.\n')
+      .concat('.*****.\n')
+      .concat('-*****-\n')
+      .concat('.*****.\n')
+      .concat('.*****.\n')
+      .concat('...-...');
     const result = circle.drawCircle(radius);
     expect(result).toEqual(expected);
   });
 
   test('should draw the circle when given a radius = 1', () => {
     const radius = 1;
-    const expected = '.-.\n'
-                   + '-*-\n'
-                   + '.-.';
+    const expected = '.-.\n'.concat('-*-\n').concat('.-.');
     const result = circle.drawCircle(radius);
     expect(result).toEqual(expected);
   });
