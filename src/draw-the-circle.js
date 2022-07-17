@@ -1,23 +1,24 @@
 const drawCircle = (radius) => {
-  const thickness = 0.5;
   const symbol = '*';
-  const rin = radius - thickness;
-  const rout = radius + thickness;
-  let string = '';
+  let result = '';
   for (let y = radius; y >= -radius; y -= 1) {
-    for (let x = -radius; x < rout; x += 0.4) {
-      const value = x * x + y * y;
-      if (value >= rin * rin && value <= rout * rout) {
-        string += symbol;
-      } else {
-        string += ' ';
+    for (let x = radius; x >= -radius; x -= 1) {
+      const value = x ** 2 + y ** 2 - radius ** 2;
+      if (value < 0) {
+        result += symbol;
+      }
+      if (value == 0) {
+        result += '-';
+      }
+      if (value > 0) {
+        result += '.';
       }
     }
     if (y !== -radius) {
-      string += '\n';
+      result += '\n';
     }
   }
-  return string;
+  return result;
 };
 
 module.exports = {
