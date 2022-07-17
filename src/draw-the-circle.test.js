@@ -23,7 +23,7 @@ describe('Circle', () => {
     const expected = '...-...\n'
                    + '.*****.\n'
                    + '.*****.\n'
-                   + '-***** -\n'
+                   + '-*****-\n'
                    + '.*****.\n'
                    + '.*****.\n'
                    + '...-...';
@@ -34,7 +34,7 @@ describe('Circle', () => {
   test('should draw the circle when given a radius = 1', () => {
     const radius = 1;
     const expected = '.-.\n'
-                   + '-* -\n'
+                   + '-*-\n'
                    + '.-.';
     const result = circle.drawCircle(radius);
     expect(result).toEqual(expected);
