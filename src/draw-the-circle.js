@@ -7,7 +7,7 @@ const drawCircle = (radius) => {
       if (value < 0) {
         result += symbol;
       }
-      if (value == 0) {
+      if (value === 0) {
         result += '-';
       }
       if (value > 0) {
