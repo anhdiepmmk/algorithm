@@ -17,7 +17,7 @@ describe('triple equation', () => {
       b: 1,
       c: 2,
       d: 3,
-      expected: -1.28,
+      expected: -1.2756822036509847,
     },
 
     {
@@ -27,7 +27,7 @@ describe('triple equation', () => {
       b: 3,
       c: 1,
       d: 3,
-      expected: -1.32,
+      expected: -1.3208320228024568,
     },
 
     {
@@ -47,7 +47,7 @@ describe('triple equation', () => {
       b: 15,
       c: 75,
       d: 7,
-      expected: -9.9,
+      expected: -9.904868131524017,
     },
 
     {
@@ -57,7 +57,7 @@ describe('triple equation', () => {
       b: 6,
       c: 2,
       d: 2,
-      expected: -1.83,
+      expected: -1.834686470520026,
     },
 
     {
@@ -67,7 +67,11 @@ describe('triple equation', () => {
       b: 3,
       c: -1,
       d: -1,
-      expected: { x1: 0.62, x2: -0.5, x3: -1.62 },
+      expected: {
+        x1: 0.6180339887498949,
+        x2: -0.49999999999999994,
+        x3: -1.6180339887498947,
+      },
     },
   ])(
     'should return $expected when given ($a, $b, $c, $d)',

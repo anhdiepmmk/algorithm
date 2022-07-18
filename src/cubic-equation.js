@@ -27,9 +27,6 @@ function cubicEquationSolve(a, b, c, d) {
           Math.cos(Math.acos(k) / 3 + (2 * Math.PI) / 3) -
           b) /
         (3 * a);
-      x1 = Math.round(x1 * 100) / 100;
-      x2 = Math.round(x2 * 100) / 100;
-      x3 = Math.round(x3 * 100) / 100;
       return { x1, x2, x3 };
     }
 
@@ -39,24 +36,21 @@ function cubicEquationSolve(a, b, c, d) {
           ((absK + (k ** 2 - 1) ** (1.0 / 2)) ** (1.0 / 3) +
             (absK - (k ** 2 - 1) ** (1.0 / 2)) ** (1.0 / 3)) -
         b / (3 * a);
-      return Math.round(x * 100) / 100;
+      return x;
     }
   }
 
   if (delta === 0) {
     if (b * b * b - 27 * a * a * d === 0) {
       x = -b / (3 * a);
-      x = Math.round(x * 100) / 100;
     }
 
     if (b ** 3 - 27 * a ** 2 * d < 0) {
       x = (-b - (27 * a ** 2 * d - b ** 3) ** (1 / 3)) / (3 * a);
-      x = Math.round(x * 100) / 100;
     }
 
     if (b ** 3 - 27 * a ** 2 * d > 0) {
       x = (-b - (b ** 3 - 27 * a ** 2 * d) ** (1 / 3)) / (3 * a);
-      x = Math.round(x * 100) / 100;
     }
     return x;
   }
@@ -65,7 +59,6 @@ function cubicEquationSolve(a, b, c, d) {
   const k2 = (Math.sqrt(k * k + 1) - k) ** (1 / 3);
   const p = Math.abs(delta) ** 0.5 / (3 * a);
   x = p * (k1 - k2) - b / (3 * a);
-  x = Math.round(x * 100) / 100;
   return x;
 }
 
