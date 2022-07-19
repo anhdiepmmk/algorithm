@@ -12,6 +12,7 @@ describe('check-primes', () => {
   test.each([
     { n: 0, expected: false },
     { n: 1, expected: false },
+    { n: 4, expected: false },
     { n: 100, expected: false },
     { n: 123, expected: false },
   ])('should return $expected when given $n', ({ n, expected }) => {
