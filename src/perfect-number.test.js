@@ -10,6 +10,7 @@ describe('perfect number', () => {
     expect(perfect.isPerfect(n)).toEqual(expected);
   });
   test.each([
+    { n: 0, expected: false },
     { n: 12, expected: false },
     { n: 5, expected: false },
     { n: 100, expected: false },
